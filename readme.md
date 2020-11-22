@@ -1,6 +1,6 @@
-# Debian Slim HU
+# Debian Buster Slim HU
 
-Debian slim image for my projects
+Debian Buster slim image for my projects
 
 ## Description
 
