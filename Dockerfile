@@ -1,4 +1,4 @@
-FROM debian:buster-slim AS buster-slim
+FROM debian:buster-slim
 
 # environments
 ENV TERM xterm
