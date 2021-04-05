@@ -6,7 +6,14 @@ Debian Buster slim image for my projects
 
 ## Description
 
-- parent : buster-slim
-- apt installs : unzip gnupg curl wget telnet net-tools iputils-ping ca-certificates apt-transport-https htop locales tzdata
+- base image : debian:buster-slim
+- apt-get install : unzip gnupg curl wget telnet net-tools iputils-ping ca-certificates apt-transport-https htop locales tzdata
 - timezone : Europe/Budapest
-- locales : hu_HU.UTF-8 and hu_HU ISO-8859-2
+- locales -a :
+  - C
+  - C.UTF-8
+  - hu_HU
+  - hu_HU.iso88592
+  - hu_HU.utf8
+  - hungarian
+  - POSIX

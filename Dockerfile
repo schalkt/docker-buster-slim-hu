@@ -11,7 +11,8 @@ ARG TIMEZONE=Europe/Budapest
 RUN apt-get update \
     && apt-get upgrade -y --no-install-recommends \
     && apt-get install -y --no-install-recommends unzip gnupg curl wget telnet net-tools iputils-ping ca-certificates apt-transport-https htop locales tzdata \
-    && cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
+    && rm -f /etc/localtime \
+    && ln -snf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
     && echo ${TIMEZONE} > /etc/timezone \
     && sed -i 's/# hu_HU.UTF-8 UTF-8/hu_HU.UTF-8 UTF-8/g' /etc/locale.gen \
     && sed -i 's/# hu_HU ISO-8859-2/hu_HU ISO-8859-2/g' /etc/locale.gen \
