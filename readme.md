@@ -14,6 +14,7 @@ Debian Buster slim image for my projects
   - C.UTF-8
   - hu_HU
   - hu_HU.iso88592
-  - hu_HU.utf8
+  - hu_HU.UTF-8
+  - en_US.UTF-8
   - hungarian
   - POSIX

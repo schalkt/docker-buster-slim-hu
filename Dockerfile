@@ -14,6 +14,7 @@ RUN apt-get update \
     && rm -f /etc/localtime \
     && ln -snf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
     && echo ${TIMEZONE} > /etc/timezone \
+    && sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen \
     && sed -i 's/# hu_HU.UTF-8 UTF-8/hu_HU.UTF-8 UTF-8/g' /etc/locale.gen \
     && sed -i 's/# hu_HU ISO-8859-2/hu_HU ISO-8859-2/g' /etc/locale.gen \
     && dpkg-reconfigure -f noninteractive locales \
